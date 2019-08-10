@@ -1,4 +1,10 @@
-- hosts: "{{ hostname }}"
+---
+- hosts: all
+
+  become: yes
+  become_method: sudo
+  remote_user: ubuntu
+
   gather_facts: false
   tasks:
     - name: create and/or change {{ username}}'s  password
