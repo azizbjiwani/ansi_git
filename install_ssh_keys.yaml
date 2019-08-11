@@ -1,0 +1,16 @@
+---
+- hosts: all
+
+  become: yes
+  become_method: sudo
+  remote_user: ubuntu
+  gather_facts: false
+  tasks:
+    - name: using with_file
+      authorized_key:
+        key: "{{ item }}"
+        user: "{{ username }}"
+        state: present
+        exclusive: False
+      with_file:
+        - /home/ec2-user/.ssh/id_rsa.pub
