@@ -24,3 +24,8 @@ drwxrwxr-x 3 ec2-user ec2-user 4096 Aug 11 00:29 newgitproject
 total 0  
 [ec2-user@ip-172-31-43-65 delete]$  
   
+[ec2-user@ip-172-31-43-65 delete]$ cd newgitproject  
+[ec2-user@ip-172-31-43-65 newgitproject]$ touch test.txt  
+[ec2-user@ip-172-31-43-65 newgitproject]$ git add test.txt  
+[ec2-user@ip-172-31-43-65 newgitproject]$ git commit -m "first commit of test.txt"  
+[ec2-user@ip-172-31-43-65 newgitproject]$ git commit --amend --reset-author  
